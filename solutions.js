@@ -1,3 +1,5 @@
+//---------- Problem (1) ----------//
+
 function genSumOfMultiples(){
 	var max = document.getElementById('form-input1').value;
 	document.getElementById('input1').innerHTML = max;
@@ -15,6 +17,7 @@ function genSumOfMultiples(){
 
 document.getElementById('compute1').addEventListener('click', genSumOfMultiples);
 
+//---------- Problem (2) ----------//
 
 function evenFibNums(){
 	var result = 2;
@@ -34,6 +37,7 @@ function evenFibNums(){
 
 document.getElementById('compute2').addEventListener('click', evenFibNums);
 
+//---------- Problem (3) ----------//
 
 function lrgstPrimeFactor(){
 	var num = document.getElementById('form-input2').value
@@ -44,10 +48,8 @@ function lrgstPrimeFactor(){
 		}else{
 			maxPrime++;
 		}
-		console.log(num);
 	}
 	document.getElementById('output3').innerHTML = 'Result: ' + maxPrime;
 }
 
 document.getElementById('compute3').addEventListener('click', lrgstPrimeFactor);
-
