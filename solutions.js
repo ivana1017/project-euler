@@ -36,7 +36,17 @@ document.getElementById('compute2').addEventListener('click', evenFibNums);
 
 
 function lrgstPrimeFactor(){
-
+	var num = document.getElementById('form-input2').value
+	var maxPrime = 2;
+	while (maxPrime <= num){
+		if(num % maxPrime == 0){
+			num /= maxPrime;
+		}else{
+			maxPrime++;
+		}
+		console.log(num);
+	}
+	document.getElementById('output3').innerHTML = 'Result: ' + maxPrime;
 }
 
 document.getElementById('compute3').addEventListener('click', lrgstPrimeFactor);
