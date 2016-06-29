@@ -10,7 +10,34 @@ function genSumOfMultiples(){
 		}
 		num++;
 	}
-	document.getElementById('output1').innerHTML = result;
+	document.getElementById('output1').innerHTML = 'Result: ' + result;
 }
+
 document.getElementById('compute1').addEventListener('click', genSumOfMultiples);
+
+
+function evenFibNums(){
+	var result = 2;
+	var term1 = 1;
+	var prevTerm = 2;
+	var nextTerm = term1 + prevTerm;
+	while(nextTerm < 4000000){
+		if(nextTerm % 2 == 0){
+			result+=nextTerm;
+		}
+		var temp = nextTerm;
+		nextTerm = nextTerm + prevTerm;
+		prevTerm = temp;
+	}
+	document.getElementById('output2').innerHTML = 'Result: ' + result;
+}
+
+document.getElementById('compute2').addEventListener('click', evenFibNums);
+
+
+function lrgstPrimeFactor(){
+
+}
+
+document.getElementById('compute3').addEventListener('click', lrgstPrimeFactor);
 
